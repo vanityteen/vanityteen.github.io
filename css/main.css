@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0be493;
+  background: #1bff26;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2291,12 +2291,12 @@ embed {
   white-space: nowrap;
 }
 * {
-  cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur"), auto;
+  cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur"), auto !important;
 }
 :link,
 :active,
 :focus {
-  cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur"), auto;
+  cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur"), auto !important;
 }
 ::-webkit-scrollbar {
   width: 10px;
