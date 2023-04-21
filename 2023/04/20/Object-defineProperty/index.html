@@ -20,28 +20,36 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="知识盲盒">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="Object.defineProperty()语法1Object.defineProperty(obj, prop, descriptor);  参数 obj：要定义属性的对象 prop：要定义或修改的属性的名称或 Symbol descriptor：要定义或修改的属性描述符  使用12345678var obj &#x3D; &amp;#123;&amp;#125;;Object.defineProperty(obj,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object.defineProperty">
+<meta property="og:url" content="http://example.com/2023/04/20/Object-defineProperty/index.html">
 <meta property="og:site_name" content="知识盲盒">
+<meta property="og:description" content="Object.defineProperty()语法1Object.defineProperty(obj, prop, descriptor);  参数 obj：要定义属性的对象 prop：要定义或修改的属性的名称或 Symbol descriptor：要定义或修改的属性描述符  使用12345678var obj &#x3D; &amp;#123;&amp;#125;;Object.defineProperty(obj,">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/04/20/pic/defineProperty_1.jpg">
+<meta property="og:image" content="http://example.com/2023/04/20/pic/defineProperty_2.jpg">
+<meta property="article:published_time" content="2023-04-20T02:15:20.000Z">
+<meta property="article:modified_time" content="2023-04-21T08:04:21.398Z">
 <meta property="article:author" content="Carpe diem !">
+<meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/04/20/pic/defineProperty_1.jpg">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/04/20/Object-defineProperty/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>知识盲盒</title>
+  <title>Object.defineProperty | 知识盲盒</title>
   
 
 
@@ -140,9 +148,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -158,10 +167,9 @@
       <meta itemprop="name" content="知识盲盒">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/04/20/Object-defineProperty/" class="post-title-link" itemprop="url">Object.defineProperty</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Object.defineProperty
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -191,7 +199,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a>Object.defineProperty()</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, prop, descriptor);</span><br></pre></td></tr></table></figure>
+        <h1 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a>Object.defineProperty()</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, prop, descriptor);</span><br></pre></td></tr></table></figure>
 
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
 <li>obj：要定义属性的对象</li>
@@ -328,158 +336,33 @@
 
 <p>参考文章：<br>[1] <a target="_blank" rel="noopener" href="https://burning-shadow.github.io/2019/04/25/%E4%B8%BA%E4%BB%80%E4%B9%88Object.defineProperty%E4%B8%8D%E8%83%BD%E6%A3%80%E6%B5%8B%E5%88%B0%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6%E7%9A%84%E5%8F%98%E5%8C%96/">为什么Object.defineProperty不能检测到数组长度的变化</a><br>[2] <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903710410162183">ES6 系列之 defineProperty 与 proxy</a><br>[3] <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty MDN</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/23/Sveltejs%E4%B8%8A%E6%89%8B%E5%88%9D%E4%BD%93%E9%AA%8C/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Carpe diem !">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="知识盲盒">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/23/Sveltejs%E4%B8%8A%E6%89%8B%E5%88%9D%E4%BD%93%E9%AA%8C/" class="post-title-link" itemprop="url">Sveltejs上手初体验</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-23 14:07:59 / 修改时间：14:10:01" itemprop="dateCreated datePublished" datetime="2023-03-23T14:07:59+08:00">2023-03-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/23/Sveltejs%E4%B8%8A%E6%89%8B%E5%88%9D%E4%BD%93%E9%AA%8C/" rel="prev" title="Sveltejs上手初体验">
+      <i class="fa fa-chevron-left"></i> Sveltejs上手初体验
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/23/Hexo&Next%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Carpe diem !">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="知识盲盒">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/23/Hexo&Next%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">Hexo的Next主题自定义样式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-23 00:00:00 / 修改时间：15:31:53" itemprop="dateCreated datePublished" datetime="2023-03-23T00:00:00+08:00">2023-03-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="自定义主题样式"><a href="#自定义主题样式" class="headerlink" title="自定义主题样式"></a>自定义主题样式</h1><h2 id="x1F308-添加动态背景"><a href="#x1F308-添加动态背景" class="headerlink" title="&#x1F308;添加动态背景"></a>&#x1F308;添加动态背景</h2><blockquote>
-<p><font color="#f60"><b>注意</b></font> ：如果next主题在5.1.1以上的话就不用我这样设置，直接在主题配置文件中找到canvas_nest: false，把它改为canvas_nest: true就行了（注意分号后面要加一个空格）</p>
-</blockquote>
-<h3 id="修改-layout-swig"><a href="#修改-layout-swig" class="headerlink" title="修改 _layout.swig"></a>修改 <span style="color:#f60;background-color:#f0f0f0;border:1px solid #D9D9D9;padding:3px;font-weight:700">_layout.swig</span></h3><p><span>打开 </span><span style="color:#f60;background-color:#f0f0f0;border:1px solid #D9D9D9;padding:3px;font-weight:700">themes / next / layout / _layout.swig</span></p>
-
- <p>在 <span style="color:#f60;background-color:#f0f0f0;border:1px solid #D9D9D9;padding:3px;font-weight:700">< /body></span> 之前添加代码(注意不要放在< /head>的后面)</p>
-  
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p><span>打开 </span><span style="color:#f60;background-color:#f0f0f0;border:1px solid #D9D9D9;padding:3px;font-weight:700">themes / next / _config.yml</span><span>，在里面添加如下代码：(可以放在最后面)</span></p>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># --------------------------------------------------------------</span><br><span class="line"># background settings</span><br><span class="line"># --------------------------------------------------------------</span><br><span class="line"># add canvas-nest effect</span><br><span class="line"># see detail from https://github.com/hustcc/canvas-nest.js</span><br><span class="line">canvas_nest: true</span><br></pre></td></tr></table></figure>
-<p>到此就结束了，运行 hexo clean，然后运行 hexo g,然后运行 hexo s</p>
-<p>如果感觉默认的线条太多的话，可以改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;</span><br><span class="line">color=&quot;0,0,255&quot; opacity=&#x27;0.7&#x27; zIndex=&quot;-2&quot; count=&quot;99&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="配置项说明"><a href="#配置项说明" class="headerlink" title="配置项说明"></a>配置项说明</h4><ul>
-<li>color ：线条颜色, 默认: ‘0,0,0’；三个数字分别为(R,G,B)</li>
-<li>opacity: 线条透明度（0~1）, 默认: 0.5</li>
-<li>count: 线条的总数量, 默认: 150</li>
-<li>zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -532,6 +415,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-defineProperty"><span class="nav-number">1.</span> <span class="nav-text">Object.defineProperty()</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0"><span class="nav-number">1.1.1.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.3.</span> <span class="nav-text">描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%8E-%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E4%B8%8A%E7%9A%84%E5%A4%9A%E4%B8%AA%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">🔎 监听对象上的多个属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%8E-%E6%B7%B1%E5%BA%A6%E7%9B%91%E5%90%AC%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.2.1.</span> <span class="nav-text">🔎 深度监听一个对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%8E-%E7%9B%91%E5%90%AC%E6%95%B0%E7%BB%84"><span class="nav-number">1.2.2.</span> <span class="nav-text">🔎 监听数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%AD-%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">💭 总结一下</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
